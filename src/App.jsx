@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 const initialRow = { name: '', city: '', country: '' };
@@ -49,6 +50,7 @@ const App = () => {
   };
 
   return (
+    <Router basename="/my-react-app">
     <div className="app">
       <header className="header">a<span className="highlight">i</span>ra</header>
       <div className="tabs">
@@ -118,6 +120,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    </Router>
   );
 };
 
